@@ -35,7 +35,7 @@ def get_airbyte_schema(file_path: str, separator: str):
     dataset_name = get_dataset_name(file_path)
 
     source = ab.get_source("source-file"
-                          ,local_executable="source-file.exe"
+                          ,local_executable="/opt/render/project/src/source-file.exe"
                           ,install_if_missing= False
                         )
     source.set_config(
